@@ -1,0 +1,26 @@
+[tool.black]
+line-length = 100
+target-version = [
+    "py310",
+]
+extend-exclude = "(dashboard\\.py|factor_analysis\\.py|portfolio_analysis_fixed\\.py|portfolio_analysis_pipeline\\.py)"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = [
+    "dashboard.py",
+    "factor_analysis.py",
+    "portfolio_analysis_fixed.py",
+    "portfolio_analysis_pipeline.py",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra"
+pythonpath = [
+    ".",
+]
+testpaths = [
+    "tests",
+]
